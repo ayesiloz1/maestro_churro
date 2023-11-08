@@ -1,0 +1,78 @@
+/* Style for your header links */
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333; /* or any dark color you prefer */
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+.header li {
+  display: inline; /* Or flex, if using flexbox */
+}
+
+.header li a {
+  display: block;
+  color: white; /* Default text color */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+}
+
+/* Hover effect for links */
+.header li a:hover {
+  color: yellow; /* Change text color to yellow */
+  border-bottom: 2px solid yellow; /* Add a yellow line under the text */
+}
+
+
+/* Responsive navigation - will trigger at 768px */
+@media screen and (max-width: 768px) {
+  .header ul {
+      display: none; /* Initially hide the navigation */
+  }
+  
+  .header li a:hover {
+    background-color: yellow; /* Sets the background color to yellow */
+    /* Optional: Change the text color if necessary to ensure readability */
+    color: #333; /* Dark text color for better contrast against the yellow */
+}
+  .header.responsive ul {
+      display: block; /* Show the navigation when responsive mode is triggered */
+      width: 100%; /* Full width */
+  }
+  
+  .header.responsive li {
+      float: none;
+      width: 100%; /* Full width */
+  }
+  
+  .header.responsive li a {
+      text-align: center; /* Center align links */
+  }
+
+  .icon {
+      display: block;
+      position: absolute;
+      right: 10px; /* Adjust to your preference */
+      top: 10px; /* Adjust to your preference */
+      font-size: 1.5em; /* Larger icon */
+      cursor: pointer;
+  }
+}
+
+/* When the icon is clicked, the 'responsive' class is added to header */
+.header .icon {
+  display: none; /* Hide icon initially */
+}
+.header-logo {
+  width: 110px; /* or any other size */
+  height: auto; /* to maintain the aspect ratio */
+  
+}
+  
+  

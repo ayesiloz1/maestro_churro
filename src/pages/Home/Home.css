@@ -1,0 +1,16 @@
+/* In src/pages/Home/Home.css */
+.hero-video {
+    width: 300  ; /* Adjust width as needed, could be in pixels or percentages */
+    max-width: 300px; /* Setting a max-width will make it responsive */
+    height: 50; /* Keep aspect ratio intact */
+    display: block; /* To center your video if needed */
+    margin: 0 auto; /* Center the video if block display */
+ }
+ .home {
+    background-image: url('../../images/background2.jpg'); /* Go up two levels to src then into images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Adjust the height as needed */
+  }
+  
