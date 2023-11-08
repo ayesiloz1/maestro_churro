@@ -27,7 +27,7 @@ function Home() {
           </p>
         </section>
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

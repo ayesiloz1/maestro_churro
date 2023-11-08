@@ -1,0 +1,68 @@
+/* Footer.css */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+  
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+  
+.social-media-links {
+    display: flex;
+    justify-content: center; /* Center the social links */
+}
+  
+.social-link {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.2rem; /* Adjust the icon size */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+  
+.social-link:hover,
+.footer-survey a:hover,
+.footer-career a:hover {
+    color: #ffd700; /* Yellow color on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+  
+.footer-survey a,
+.footer-career a {
+    color: #fff;
+    margin-left: 10px; /* Spacing from the social links */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.footer-survey a,
+.footer-career a {
+    display: inline-block; /* Ensures margin and padding are respected */
+    color: #fff;
+    margin: 0 10px; /* Consistent spacing with social links */
+    transition: color 0.3s; /* Smooth transition for color change */
+}
+
+/* Adjust the spacing for smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .social-media-links {
+      margin-top: 10px;
+      flex-direction: column;
+    }
+  
+    .social-link,
+    .footer-survey a,
+    .footer-career a {
+      margin-bottom: 10px;
+    }
+}
