@@ -1,6 +1,9 @@
 import React from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
+import BookUsSlider from './Bookus';
+import MenuSlider from './Menuslider';
+import GallerySlider from './Gallery';
 import './Home.css';
 import backgroundImage from '../../images/background2.jpg';
 
@@ -10,9 +13,17 @@ function Home() {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    height: '100vh', // Adjust the height as needed
+    height: '120vh',
   };
-
+   // Slider settings
+   const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    // Add any other settings you might need
+  };
   return (
     <div className="home" style={backgroundStyle}>
       <Header />
@@ -26,8 +37,20 @@ function Home() {
             taste buds.
           </p>
         </section>
+
+        <div className="grid-container">
+          <div className="slider-wrapper book-us-slider">
+            <BookUsSlider />
+          </div>
+          <div className="slider-wrapper menu-slider">
+            <MenuSlider />
+          </div>
+          <div className="slider-wrapper gallery-slider">
+            <GallerySlider />
+          </div>
+        </div>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
