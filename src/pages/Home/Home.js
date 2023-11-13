@@ -1,6 +1,4 @@
 import React from 'react';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
 import BookUsSlider from './Bookus';
 import MenuSlider from './Menuslider';
 import GallerySlider from './Gallery';
@@ -15,22 +13,13 @@ function Home() {
     backgroundRepeat: 'no-repeat',
     height: '120vh',
   };
-   // Slider settings
-   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // Add any other settings you might need
-  };
+ 
   return (
     <div className="home" style={backgroundStyle}>
-      <Header />
       <main>
         <section className="hero">
-          <h1>Welcome to Maestro Churro!</h1>
-          <p>
+          <h1 className="Welcome">Welcome to Maestro Churro!</h1>
+          <p className='Paragraph'>
             Delight in the taste of our handcrafted churros, made with love and
             passion. Experience the perfect blend of crispy and soft, sweet and 
             savory, with our unique churro creations that promise to enchant your 
@@ -50,7 +39,6 @@ function Home() {
           </div>
         </div>
       </main>
-      <Footer />
     </div>
   );
 }

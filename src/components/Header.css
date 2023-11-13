@@ -1,78 +1,75 @@
-/* Style for your header links */
-.header ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333; /* or any dark color you prefer */
+/* Header.css */
+
+.header {
   display: flex;
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Center items vertically */
+  flex-direction: column; /* Stack logo and navigation vertically */
+  align-items: center; /* Center-align items horizontally */
+  background: linear-gradient(45deg,rgb(76, 76, 75),rgb(42, 42, 40),rgb(76, 76, 75)) /* Set the background color */
 }
 
-.header li {
-  display: inline; /* Or flex, if using flexbox */
+.header-logo-link {
+  margin-bottom: 20px; /* Space between logo and navigation links */
+}
+
+.header-nav {
+  width: 100%; /* Full width to contain the navigation links */
+  background-color: #6c5e3c; /* Set the background color */
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; /* Center navigation items horizontally */
+  padding: 0;
+  gap: 20px; /* Space between navigation items */
 }
 
 .header li a {
-  display: block;
-  color: white; /* Default text color */
-  text-align: center;
+  color: white;
   padding: 14px 16px;
   text-decoration: none;
-  transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
+  transition: color 0.3s, background-color 0.3s;
 }
 
-/* Hover effect for links */
 .header li a:hover {
-  color: yellow; /* Change text color to yellow */
-  border-bottom: 2px solid yellow; /* Add a yellow line under the text */
+  color: yellow;
 }
 
-
-/* Responsive navigation - will trigger at 768px */
+/* Responsive navigation */
 @media screen and (max-width: 768px) {
+  .header {
+    padding-top: 10px;
+  }
+
+  .header-logo-link {
+    margin-bottom: 10px;
+  }
+
   .header ul {
-      display: none; /* Initially hide the navigation */
+    display: none; /* Hide the navigation initially */
   }
-  
-  .header li a:hover {
-    background-color: yellow; /* Sets the background color to yellow */
-    /* Optional: Change the text color if necessary to ensure readability */
-    color: #333; /* Dark text color for better contrast against the yellow */
-}
+
   .header.responsive ul {
-      display: block; /* Show the navigation when responsive mode is triggered */
-      width: 100%; /* Full width */
-  }
-  
-  .header.responsive li {
-      float: none;
-      width: 100%; /* Full width */
-  }
-  
-  .header.responsive li a {
-      text-align: center; /* Center align links */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the responsive navigation items */
   }
 
   .icon {
-      display: block;
-      position: absolute;
-      right: 10px; /* Adjust to your preference */
-      top: 10px; /* Adjust to your preference */
-      font-size: 1.5em; /* Larger icon */
-      cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
   }
 }
 
-/* When the icon is clicked, the 'responsive' class is added to header */
 .header .icon {
   display: none; /* Hide icon initially */
 }
+
 .header-logo {
-  width: 110px; /* or any other size */
-  height: auto; /* to maintain the aspect ratio */
-  
+  width: 110px; /* Set the logo size */
+  height: auto;
 }
-  
-  
