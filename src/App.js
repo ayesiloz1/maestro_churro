@@ -12,10 +12,10 @@ import ContactUs from './pages/Contact';
 import Survey from './components/Survey';
 import Career from './components/Career';
 import './App.css';
-
 function App() {
   return (
     <div className="app">
+    
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

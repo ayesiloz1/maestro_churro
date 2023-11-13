@@ -1,0 +1,79 @@
+/* Slider Container */
+.slider-container {
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  
+  /* Slider Title */
+  .slider-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Slider Wrapper for each slide */
+  .slider-wrapper {
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Image Styling */
+  .slider-wrapper img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  /* Slide Caption Styling */
+  .slide-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+  }
+  
+  /* Slide Title */
+  .slide-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  /* Slide Description */
+  .slide-description {
+    font-size: 16px;
+    margin: 10px 0 0;
+  }
+  
+  /* React Slick Overrides (Optional) */
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-prev, .slick-next {
+    color: #333;
+    z-index: 1;
+  }
+  
+  /* Responsive Styling (Optional) */
+  @media (max-width: 768px) {
+    .slider-title {
+      font-size: 20px;
+    }
+  
+    .slide-title {
+      font-size: 18px;
+    }
+  
+    .slide-description {
+      font-size: 14px;
+    }
+  }
+  

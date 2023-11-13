@@ -2,15 +2,22 @@
 .home {
   text-align: center;
   padding: 50px;
-  background-color: #f7f7f7;
+  
 }
 
 .home h1 {
-  color: #5d4037;
+  color: #020202;
   margin-bottom: 20px;
 }
 
 .home p {
-  color: #757575;
+  color: #ffffff;
   font-size: 18px;
+}
+.app {
+  min-height: 100vh; /* Ensure the app fills the full viewport height */
+  background-image: url('./images/background2.jpg'); /* Adjust the relative path as necessary */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
