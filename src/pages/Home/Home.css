@@ -85,14 +85,24 @@
   
   /* Hero section styles */
   .hero {
-    text-align: center;
-    padding: 20px 20px;
+    background: linear-gradient(45deg, rgb(251, 201, 135), rgb(204, 179, 132));/* Dark gray background color */
+    padding: 20px;
+  }
+  .Welcome {
     color: white;
+    font-size: 32px; /* Adjust the font size as needed */
+    /* You can also add additional styling properties here */
+  }
+  .Paragraph {
+    color: rgb(29, 23, 23);
+    font-size: 18px; /* Adjust the font size as needed */
+    /* You can also add additional styling properties here */
   }
   
   /* Home background styles */
   .home {
     background-attachment: fixed;
+    color: white;
   }
   /* Shared styles for all slider items */
 .slider-container .slick-slide {
@@ -112,5 +122,3 @@
     margin: 0 auto;
     display: block;
   }
-
-  

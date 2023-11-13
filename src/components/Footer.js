@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link for internal navigation
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import SurveyIcon from '../images/survey.jpg';
+import SurveyIcon from '../images/survey.png';
 import CareerIcon from '../images/career.png';
 import './Footer.css';
 
@@ -24,12 +23,12 @@ const Footer = () => {
           <FontAwesomeIcon icon={faTwitter} />
         </a>
         {/* Internal links for survey and career */}
-        <Link to="/mysurvey" className="social-link footer-survey">
-          <FontAwesomeIcon icon={SurveyIcon} />
+        <Link to="/survey" className="social-link footer-survey">
+          <img src={SurveyIcon} alt="Survey" />
           Survey
         </Link>
         <Link to="/career" className="social-link footer-career">
-          <FontAwesomeIcon icon={CareerIcon} />
+          <img src={CareerIcon} alt="Career" />
           Career
         </Link>
       </div>
