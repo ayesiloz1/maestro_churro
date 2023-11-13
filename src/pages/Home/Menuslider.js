@@ -34,19 +34,20 @@ const MenuSlider = () => {
         autoplay: true
       };
 
-  return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        {slidesData.map((slide, index) => (
-          <div key={index}>
-            <img src={slide.image} alt={slide.title} />
-            <h3>{slide.title}</h3>
-            <p>{slide.description}</p>
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
-};
+      return (
+        <div className="slider-container">
+        <h2 className="slider-title">Menu</h2> {/* Slider Title Added Here */}
+          <Slider {...settings}>
+            {slidesData.map((slide, index) => (
+              <div key={index} className="slider-wrapper">
+                <img src={slide.image} alt={slide.title} />
+                <h3 className="slide-title">{slide.title}</h3>
+                <p className="slide-description">{slide.description}</p>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      );
+    };
 
 export default MenuSlider;

@@ -1,74 +1,13 @@
-.slider-container {
-    max-width: 100%;
-    margin: 20px;
-    position: relative;
-  }
-  
-  .slider-wrapper img {
-    width: 200%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  .slider-wrapper h3 {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    color: rgb(10, 1, 1);
-    background-color: rgba(15, 1, 1, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    width: calc(100% - 40px);
-    box-sizing: border-box;
-  }
-  
-  .slider-wrapper p {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    width: calc(100% - 40px);
-    box-sizing: border-box;
-    margin-top: -20px;
-  }
+
   
   /* Grid container for all sliders */
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(425px, 1fr));
-    gap: 40px;
+    gap: 50px;
     padding: 10px;
   }
-  
-  /* Specific styles for BookUsSlider - if needed */
-  .book-us-slider h3 {
-    /* Styles specific to the BookUsSlider title */
-  }
-  
-  .book-us-slider p {
-    /* Styles specific to the BookUsSlider description */
-  }
-  
-  /* Specific styles for MenuSlider - if needed */
-  .menu-slider h3 {
-    /* Styles specific to the MenuSlider title */
-  }
-  
-  .menu-slider p {
-    /* Styles specific to the MenuSlider description */
-  }
-  
-  /* Specific styles for GallerySlider - if needed */
-  .gallery-slider h3 {
-    /* Styles specific to the GallerySlider title */
-  }
-  
-  .gallery-slider p {
-    /* Styles specific to the GallerySlider description */
-  }
+
   
   /* Adjustments for smaller screens */
   @media (max-width: 768px) {
@@ -109,10 +48,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 265px; /* Adjust height as needed */
+    height: 250px; /* Adjust height as needed */
     text-align: center;
-    background: #ffffff; /* Or any background color you want for the slides */
-    border-radius: 10px; /* If you want rounded corners */
+    background: #fffefe; /* Or any background color you want for the slides */
     box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow to each slide */
   }
   
@@ -122,3 +60,37 @@
     margin: 0 auto;
     display: block;
   }
+  .slider-title {
+    font-size: 24px; /* Example font size */
+    text-align: center; /* Center the title */
+    color: rgb(0, 0, 0); /* Example color */
+    background-color: #b97c19;
+    margin-bottom: 20px; /* Space between the title and the slider */
+    transition: color 0.3s ease;
+  }
+
+  .slider-title:hover {
+    color: rgb(255, 255, 255); /* Color changes to red on hover */
+    cursor: pointer; /* Changes the mouse cursor to indicate it's clickable */
+  }
+  .slider-wrapper {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .slide-caption {
+    position: absolute;
+    bottom: 10px; /* Position from the bottom of the .slider-wrapper */
+    left: 10px; /* Position from the left of the .slider-wrapper */
+    right: 10px; /* Position from the right of the .slider-wrapper */
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the background as needed */
+  }
+
+.slide-title,
+.slide-description {
+  margin: 0 auto; /* Center the text blocks */
+  display: block; /* This can help with alignment issues */
+}

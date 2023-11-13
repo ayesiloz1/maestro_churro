@@ -3,25 +3,22 @@ import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Churro_Image1 from '../../images/background.jpg';
-import './Home.css';
-// Example slide data for "Book Us"
+import Churro_Image3 from '../../images/Churro.png';
+import Churro_Image2 from '../../images/Wedding.png';
+import Churro_Image1 from '../../images/Festival.png';
+import './slider.css';
+
 const slidesData = [
   {
     image: Churro_Image1,
-    title: 'Private Events',
-    description: 'Book us for private events and enjoy exclusive treats.'
   },
   {
-    image: Churro_Image1,
-    title: 'Private Events',
-    description: 'Book us for private events and enjoy exclusive treats.'
+    image: Churro_Image2,
   },
   {
-    image: Churro_Image1,
-    title: 'Private Events',
-    description: 'Book us for private events and enjoy exclusive treats.'
-  },
+    image: Churro_Image3,
+
+  }
 ];
 
 const BookUsSlider = () => {
@@ -36,17 +33,16 @@ const BookUsSlider = () => {
 
   return (
     <div className="slider-container">
+    <h2 className="slider-title">Book Now</h2> 
       <Slider {...settings}>
         {slidesData.map((slide, index) => (
-          <div key={index}>
+          <div key={index} className="slider-wrapper">
             <img src={slide.image} alt={slide.title} />
-            <h3>{slide.title}</h3>
-            <p>{slide.description}</p>
+            
           </div>
         ))}
       </Slider>
     </div>
   );
 };
-
 export default BookUsSlider;
