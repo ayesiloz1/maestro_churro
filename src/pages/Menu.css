@@ -1,0 +1,15 @@
+.menu-container {
+    margin: 20px;
+    padding: 20px;
+  }
+  
+  .menu-heading {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .menu-item {
+    margin: 10px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+  }
