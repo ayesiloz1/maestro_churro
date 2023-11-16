@@ -1,18 +1,17 @@
+// src/pages/Menu.js
 import React from 'react';
+import ChurrosComponent from '../ChurrosComponent';
+import './Menu.css'; 
 
-
-function Menu() {
+const Menu = () => {
   return (
-    <div>
-
-      <main>
-        <h1>Our Menu</h1>
-        <p>Check out our delicious menu of churros, toppings, and drinks.</p>
-        {/* Include your menu items here */}
-      </main>
-
+    <div className="menu-container">
+      <h1 className="menu-heading">Our Delicious Menu</h1>
+      {/* ... other menu items or sections */}
+      <ChurrosComponent />
+      {/* ... potentially more menu items or sections */}
     </div>
   );
-}
+};
 
 export default Menu;

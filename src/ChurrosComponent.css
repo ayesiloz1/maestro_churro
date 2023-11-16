@@ -1,0 +1,55 @@
+
+.churros-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff; /* White background for the item */
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners for the item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
+    width: 80%; /* Adjust the width as needed */
+    max-width: 500px; /* Maximum width for large screens */
+  }
+  
+  .menu-item-details {
+    flex: 1; /* Allows the item details to fill the space */
+    padding-left: 1rem; /* Spacing between the image and the text */
+  }
+  
+  .menu-item-name {
+    font-size: 1.25rem; /* Larger font size for the name */
+    color: #333; /* Dark grey color for text for better readability */
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-item-description {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-item-price {
+    font-weight: bold;
+    color: #4CAF50; /* A green color for the price */
+    margin-bottom: 0.5rem;
+  }
+  
+  .menu-item-image {
+    width: 200px; /* Set a fixed width for the image */
+    height: auto; /* Maintain the aspect ratio of the image */
+    border-radius: 4px; /* Rounded corners for the image */
+  }
+  
+  /* Loading and error messages */
+  .churros-loading,
+  .churros-error {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 1rem;
+  }
+  
