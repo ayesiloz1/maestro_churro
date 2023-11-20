@@ -1,15 +1,156 @@
+/* Root element style to define custom properties (variables) for consistent theming and easy maintenance */
+:root {
+  --background-color-main: #faf4f0; /* Creamy, soothing background shade */
+  --text-color-heading: #855E42; /* Warm, earthy brown for headings */
+  --text-color-body: #6D4C41; /* Comforting, lighter brown for body text */
+  --font-stack: 'Merriweather', serif; /* Elegant, readable serif font */
+  --box-shadow-main: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  --box-shadow-hover: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow for interactive elements */
+  --border-radius-main: 10px; /* Consistently rounded corners for a soft, modern look */
+  --transition-standard: transform 0.3s ease; /* Smooth transition for interactive states */
+}
+
+/* Overall container for menu, providing padding and a centralized column layout */
 .menu-container {
-    margin: 20px;
-    padding: 20px;
-  }
-  
+  margin: 20px auto; /* Centered with a standard 20px margin */
+  padding: 20px; /* Comfortable padding */
+  background-color: var(--background-color-main); /* Themed background color */
+  border-radius: var(--border-radius-main); /* Themed border radius */
+  box-shadow: var(--box-shadow-main); /* Themed box shadow */
+  max-width: 800px; /* Maximum width for optimal reading experience */
+}
+
+/* Styling for the main menu heading, with responsive font-sizing and thematic color */
+.menu-heading {
+  font-size: 2.5em; /* Prominent size for main heading */
+  color: var(--text-color-heading); /* Themed text color */
+  font-family: var(--font-stack); /* Themed font-family */
+  text-align: center; /* Centered alignment for heading */
+  margin-bottom: 30px; /* Spacious margin for visual separation */
+  padding-bottom: 10px; /* Padding to increase whitespace and focus */
+  border-bottom: 2px dashed var(--text-color-heading); /* Decorative separator */
+}
+
+/* Individual menu item styling, with thematic background and shadow for emphasis */
+.menu-item {
+  margin: 20px 0; /* Vertical margin for separation */
+  padding: 15px; /* Padding for content inside menu items */
+  background-color: #fff; /* Clean white background for contrast */
+  border-radius: 5px; /* Slightly rounded corners for a friendly appearance */
+  box-shadow: var(--box-shadow-hover); /* Themed box shadow */
+  transition: var(--transition-standard); /* Transition for hover effect */
+  position: relative; /* Positioned as relative for pseudo-element positioning */
+}
+
+/* Slight raise effect on hover to provide interactive feedback */
+.menu-item:hover {
+  transform: translateY(-3px); /* Moves the item up slightly to indicate selection */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhances shadow for a "lifting" effect */
+}
+
+/* Styling for the names of each menu item, with thematic color and weight */
+.menu-item-name {
+  font-size: 1.5em; /* Sizeable font for clarity */
+  color: var(--text-color-heading); /* Themed color for consistency */
+  font-weight: 700; /* Bold weight for emphasis */
+}
+
+/* Detailed description styling, with a focus on readability and thematic coloring */
+.menu-item-description {
+  color: var(--text-color-body); /* Themed color for body text */
+  font-size: 1em; /* Standard font size for readability */
+  margin-top: 5px; /* Margin for spacing between title and description */
+}
+
+/* Responsive design adjustments for smaller screens */
+@media (max-width: 768px) {
   .menu-heading {
-    font-size: 2em;
-    color: #333;
+    font-size: 2em; /* Slightly smaller font size for space conservation */
   }
-  
-  .menu-item {
-    margin: 10px 0;
-    padding: 5px;
-    border-bottom: 1px solid #ddd;
+
+  .menu-item-name {
+    font-size: 1.2em; /* Adjusted font size for smaller screens */
   }
+
+  .menu-container {
+    margin: 10px; /* Reduced margin for screen-edge spacing */
+    padding: 10px; /* Reduced padding for content spacing */
+  }
+}
+
+/* Additional pseudo-elements for decorative flair */
+.menu-item::before {
+  content: ""; /* Necessary for pseudo-element to display */
+  position: absolute; /* Absolute position relative to the parent */
+  top: -10px; left: -10px; /* Positioning outside the parent's box */
+  width: calc(100% + 20px); /* Width to overlap parent's width */
+  height: calc(100% + 20px); /* Height to overlap parent's height */
+  border: 2px solid var(--text-color-body); /* Solid border for a framed look */
+  border-radius: inherit; /* Inherit border-radius from parent */
+  z-index: -1; /* Ensure it's behind the parent content */
+  transition: opacity 0.3s ease; /* Transition for a fade effect */
+}
+
+/* Interaction states for decorative pseudo-elements */
+.menu-item:hover::before {
+  opacity: 0; /* Fade out effect on hover for a dynamic interaction */
+}
+.menu-image {
+  display: block; /* Ensures that the image does not have extra space below it */
+  max-width: 100%; /* Ensures that the image is responsive and does not overflow its container */
+  height: 150px; /* Example fixed height */
+  object-fit: cover; /* Ensures that the aspect ratio is maintained while filling the height */
+  border-radius: 4px; /* Optional: Rounds the corners of the image */
+  margin-bottom: 10px; /* Provides space between the image and the text below */
+}
+.order-now {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ffcc00; /* Bright yellow for visibility */
+  color: #855E42; /* Text color from the theme */
+  border: none;
+  border-radius: var(--border-radius-main);
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 10px; /* Spacing from the item description */
+}
+
+/* Hover effect for 'Order Now' button */
+.order-now:hover {
+  background-color: #e6b800; /* Slightly darker yellow on hover */
+  transform: scale(1.05); /* Slight enlargement for interactivity */
+}
+.menu-item input[type="number"] {
+  width: 50px;
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+/* Styles for the total section */
+.total-section {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.total-section p {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.total-section button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ffcc00; /* Bright yellow for visibility */
+  color: #855E42; /* Text color from the theme */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.total-section button:hover {
+  background-color: #e6b800; /* Slightly darker yellow on hover */
+  transform: scale(1.05); /* Slight enlargement for interactivity */
+}
