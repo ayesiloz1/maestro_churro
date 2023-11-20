@@ -24,8 +24,6 @@ function Header() {
           <li><Link to="/" onClick={toggleNav}>Home</Link></li>
           <li><Link to="/menu" onClick={toggleNav}>Menu</Link></li>
           <li><Link to="/order" onClick={toggleNav}>Order Online</Link></li>
-          <li><Link to="/catering" onClick={toggleNav}>Catering</Link></li>
-          <li><Link to="/about" onClick={toggleNav}>About Us</Link></li>
           <li><Link to="/contact" onClick={toggleNav}>Contact Us</Link></li>
         </ul>
       </nav>
@@ -38,7 +36,9 @@ function Header() {
       >
         &#9776;
       </button>
+      
     </header>
+    
   );
 }
 

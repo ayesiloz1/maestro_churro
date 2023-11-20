@@ -1,7 +1,9 @@
 // api.js
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/maestro_churro/'; // It's better to keep this in an environment variable
+const API_URL = 'http://127.0.0.1:8000/api/churros/'; // Replace with your backend's actual URL
+
+
 
 export const getChurros = async () => {
   try {
