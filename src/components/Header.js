@@ -23,7 +23,7 @@ function Header() {
           {/* Ensure that each Link component has the onClick event to close the menu after navigation */}
           <li><Link to="/" onClick={toggleNav}>Home</Link></li>
           <li><Link to="/menu" onClick={toggleNav}>Menu</Link></li>
-          <li><Link to="/order" onClick={toggleNav}>Order Online</Link></li>
+          <li><Link to="/bookus" onClick={toggleNav}>Book Now</Link></li>
           <li><Link to="/contact" onClick={toggleNav}>Contact Us</Link></li>
         </ul>
       </nav>

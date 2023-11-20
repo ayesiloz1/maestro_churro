@@ -28,22 +28,110 @@
 /* Hero Video Section */
 .hero {
   position: relative;
-  height: 20vh; /* Adjusted height */
+  height: 75vh; /* Increased height for more impact */
   background: linear-gradient(
-    45deg,
-    rgba(254, 254, 254, 0.8),
-    rgba(204, 179, 132, 0.8)
-  ); /* Gradient overlay */
+    to bottom,
+    rgba(22, 22, 22, 0.8) 0%,
+    rgba(58, 58, 58, 0.6) 50%,
+    rgba(22, 22, 22, 0.8) 100%
+  ); /* More dynamic gradient overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-size: cover;
+  opacity: 0.5; /* Adjust as necessary for the right balance */
+  z-index: -2;
 }
 
 .hero-video {
   width: 100%;
-  height: 20vh; /* Match hero section height */
+  height: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -3; /* Ensure the video stays in the background */
+}
+
+/* Added an overlay to improve text readability */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text contrast */
   z-index: -1;
+}
+
+/* Elaborate Typography */
+.hero-title {
+  font-size: 48px; /* Larger font size for the main title */
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 24px; /* Subtitle that complements the main title */
+  font-weight: 300;
+  max-width: 600px; /* Maximum width of the subtitle for better readability */
+  margin: auto;
+}
+
+/* Decorative Elements */
+.decorative-bar {
+  height: 4px;
+  width: 80px;
+  background-color: #ffd700; /* Gold color for an elegant touch */
+  margin: 20px auto;
+}
+
+/* Example of a Call-to-Action Button */
+.hero-cta {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #ff4500; /* Or any color that fits the site’s theme */
+  color: white;
+  border: none;
+  border-radius: 25px; /* Rounded edges for the CTA button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Assuming it's a link */
+  display: inline-block; /* To apply padding and margin */
+}
+
+.hero-cta:hover {
+  background-color: #e03e10; /* Slightly darker shade on hover */
+  cursor: pointer;
+}
+
+/* Responsive Design for Hero Section */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* Adjust height for smaller screens */
+  }
+
+  .hero-title {
+    font-size: 32px; /* Smaller font size for mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
 }
 
 /* Sliders Styles */
@@ -115,4 +203,14 @@
 .Paragraph {
   font-size: 18px;
   color: #1d1717;
+}
+
+.slider-title .book-now-link {
+  color: #fff; /* Or any color you prefer */
+  text-decoration: none; /* Removes the underline */
+  transition: color 0.3s ease;
+}
+
+.slider-title .book-now-link:hover {
+  color: #ffd700; /* Changes color on hover */
 }

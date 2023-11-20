@@ -19,7 +19,7 @@
 }
 
 .header-logo-link:hover .header-logo {
-  transform: scale(1.5); /* Enlarge logo on hover */
+  transform: scale(1.1); /* Enlarge logo on hover */
   filter: drop-shadow(0px 0px 10px rgba(255, 204, 0, 0.7)); /* Yellow glow effect */
   border-radius: 50%; /* Optional: makes the logo circular on hover */
 }

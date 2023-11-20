@@ -2,37 +2,36 @@
   max-width: 600px;
   margin: 50px auto;
   padding: 40px;
-  background: linear-gradient(135deg, #c39412, #4e2003); /* Vibrant gradient background */
+  background: linear-gradient(135deg, #c39412, #4e2003);
   border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
-  color: #fff; /* White text color for contrast */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
 }
 
 .contact h1 {
-  font-size: 2.5em; /* Larger font size */
+  font-size: 2.5em;
   text-align: center;
-  color: #ffeb3b; /* Bold yellow color */
+  color: #17150a;
   margin-bottom: 0.75em;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .contact p {
   font-size: 1.1em;
   text-align: center;
   margin-bottom: 2em;
-  color: #d6d6d6; /* Light grey for subtle contrast */
+  color: #d6d6d6;
 }
 
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 1.5em; /* Slightly increased gap */
 }
 
 .contact label {
   font-size: 1em;
-  color: #ffeb3b; /* Matching label color with the header */
-  margin-bottom: 0.5em;
+  color: #ffeb3b;
+  margin-bottom: 0.5em; /* Reduced margin for labels */
 }
 
 .contact input[type="text"],
@@ -40,8 +39,10 @@
 .contact textarea {
   padding: 12px;
   font-size: 1.1em;
-  border: 2px solid #ffeb3b; /* Bright border color */
+  border: 2px solid #ffeb3b;
   border-radius: 7px;
+  background: #fff;
+  color: #000;
   outline: none;
   transition: border-color 0.3s, transform 0.3s;
 }
@@ -49,15 +50,15 @@
 .contact input[type="text"]:focus,
 .contact input[type="email"]:focus,
 .contact textarea:focus {
-  border-color: #fff; /* Change to white on focus */
-  transform: scale(1.03); /* Slight zoom on focus */
+  border-color: #fff;
+  transform: scale(1.03);
 }
 
 .contact button {
   padding: 12px 20px;
   font-size: 1.1em;
-  color: #1e3c72; /* Dark blue text */
-  background-color: #ffb43b; /* Bright yellow background */
+  color: #1e3c72;
+  background-color: #ffb43b;
   border: none;
   border-radius: 7px;
   cursor: pointer;
@@ -65,46 +66,54 @@
 }
 
 .contact button:hover {
-  background-color: #fdd835; /* Slightly darker yellow */
+  background-color: #8b6211;
   color: #fff;
-  transform: scale(1.05); /* Slight zoom effect on hover */
+  transform: scale(1.05);
 }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .contact {
-      margin: 20px;
-      padding: 20px;
-    }
+
+@media (max-width: 768px) {
+  .contact {
+    margin: 20px;
+    padding: 20px;
   }
-  .contact-method-button {
-    /* Style your contact method buttons here */
-    padding: 10px 15px;
-    margin: 10px;
-    font-size: 1em;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  .phone-dropdown {
-    margin-top: 10px; /* Add space above the dropdown */
-    background: #f0f0f0; /* Slightly different background to distinguish dropdown */
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    text-align: center;
-  }
-  
-  .phone-number {
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.2s;
-  }
-  
-  .phone-number:hover {
-    color: #0056b3;
-  }
+}
+
+/* Updated Button Spacing */
+.contact-methods button {
+  padding: 10px 15px;
+  margin: 0 10px; /* Horizontal margin added */
+  font-size: 1em;
+  background-color: #36485c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+} 
+
+.phone-dropdown {
+  margin-top: 10px;
+  background: #f0f0f0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  text-align: center;
+}
+
+.phone-number {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.2s;
+}
+
+.phone-number:hover {
+  color: #0056b3;
+}
+
+/* You can remove these rules if they are not being used */
+.email-field,
+.message-field,
+.call-field {
+  margin-bottom: 20px; /* Adjust this value as needed */
+}

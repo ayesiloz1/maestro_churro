@@ -21,8 +21,12 @@ function Survey() {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you would typically handle the form submission, e.g., sending data to a server
     setIsSubmitted(true);
+    showModal();
+};
+
+  const showModal = () => {
+      alert('Thank you for completing our extravagant survey! Your feedback is invaluable to the opulent future we craft!');
   };
 
   return (

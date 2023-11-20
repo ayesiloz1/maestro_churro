@@ -1,0 +1,80 @@
+/* BookNow.css */
+.booknow-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #c39412, #4e2003);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .booknow-container h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: #17150a;
+    margin-bottom: 0.75em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .booknow-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .booknow-form label {
+    font-size: 1em;
+    color: #ffeb3b;
+    margin-bottom: 0.5em;
+  }
+  
+  .booknow-form input[type="text"],
+  .booknow-form input[type="email"],
+  .booknow-form input[type="date"],
+  .booknow-form textarea,
+  .booknow-form select {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 2px solid #ffeb3b;
+    border-radius: 7px;
+    background: #fff;
+    color: #000;
+    outline: none;
+    margin-bottom: 20px;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  
+  .booknow-form input[type="text"]:focus,
+  .booknow-form input[type="email"]:focus,
+  .booknow-form input[type="date"]:focus,
+  .booknow-form textarea:focus,
+  .booknow-form select:focus {
+    border-color: #fff;
+    transform: scale(1.03);
+  }
+  
+  .booknow-form button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    color: #1e3c72;
+    background-color: #ffb43b;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .booknow-form button:hover {
+    background-color: #8b6211;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .booknow-container {
+      margin: 20px;
+      padding: 20px;
+    }
+  }
+  

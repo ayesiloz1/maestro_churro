@@ -9,7 +9,7 @@ import OrderOnline from './pages/OrderOnline';
 import ContactUs from './pages/Contact';
 import Survey from './components/Survey';
 import Career from './components/Career';
-
+import BookNow from './pages/BookUs';
 import './App.css';
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/order" element={<OrderOnline />} />
+        <Route path="/bookus" element={<BookNow />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/survey" element={<Survey />} />
         <Route path="/career" element={<Career />} />
