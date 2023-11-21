@@ -18,15 +18,49 @@ function Survey() {
     setFeedback(e.target.value);
   };
 
+  const sendSurveyData = (data) => {
+    // Make sure to replace 8000 with the actual port your Django server is running on
+    const endpoint = 'http://localhost:8000/api/submit-survey/';
+  
+    return fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  };
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    setIsSubmitted(true);
-    showModal();
-};
+
+    // Prepare the data to be sent
+    const surveyData = {
+      experience,
+      feedback,
+    };
+
+    // Send the data to the server
+    sendSurveyData(surveyData)
+      .then(response => {
+        if (response.ok) {
+          setIsSubmitted(true);
+          // You can either show the alert or the confirmation message, or both
+          showModal();
+        } else {
+          // Handle server errors here
+          console.error('Server error:', response);
+        }
+      })
+      .catch(error => {
+        // Handle network errors here
+        console.error('Network error:', error);
+      });
+  };
 
   const showModal = () => {
-      alert('Thank you for completing our extravagant survey! Your feedback is invaluable to the opulent future we craft!');
+    alert('Thank you for completing our survey! Your feedback is invaluable.');
   };
 
   return (
