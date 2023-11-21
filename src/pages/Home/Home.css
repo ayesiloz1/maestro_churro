@@ -1,216 +1,141 @@
 /* General Styles */
 .home {
+  font-family: 'Merriweather', serif; /* Elegant, readable font */
+  color: #4e342e; /* Rich, dark brown */
+  background: url('../../images/background2.jpg'); /* Warm beige, reminiscent of churro sugar */
   background-attachment: fixed;
-  color: white;
 }
 
 /* Grid Layout for Sliders */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2-column grid */
-  gap: 50px;
-  padding: 10px;
+  grid-template-columns: repeat(2, 1fr); /* 2-column grid layout */
+  gap: 30px; /* Reduced gap for a tighter layout */
+  padding: 20px;
 }
 
-/* Responsive Design for Sliders */
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Stack sliders in a single column on small screens */
-  }
-
-  .slider-wrapper h3,
-  .slider-wrapper p {
-    left: 30px;
-    width: calc(100% - 60px); /* Adjust width for smaller screens */
-  }
-}
-
-/* Hero Video Section */
-.hero {
-  position: relative;
-  height: 75vh; /* Increased height for more impact */
-  background: linear-gradient(
-    to bottom,
-    rgba(22, 22, 22, 0.8) 0%,
-    rgba(58, 58, 58, 0.6) 50%,
-    rgba(22, 22, 22, 0.8) 100%
-  ); /* More dynamic gradient overlay */
+/* Hero Section Styles */
+#hero-section {
+  background-color: #f7f2e7;; /* Soft tan, aligning with the churro theme */
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
   overflow: hidden;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  background-size: cover;
-  opacity: 0.5; /* Adjust as necessary for the right balance */
-  z-index: -2;
 }
 
 .hero-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -3; /* Ensure the video stays in the background */
+  z-index: -1;
 }
 
-/* Added an overlay to improve text readability */
 .hero-overlay {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text contrast */
-  z-index: -1;
+  background: rgba(121, 85, 72, 0.6); /* Darker overlay for readability */
+  z-index: 1;
 }
 
-/* Elaborate Typography */
 .hero-title {
-  font-size: 48px; /* Larger font size for the main title */
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  font-size: 3.5em;
+  color: #fff8e1; /* Off-white for high contrast */
+  text-shadow: 2px 2px 4px #6d4c41; /* Shadow for depth */
+  z-index: 2;
 }
 
 .hero-subtitle {
-  font-size: 24px; /* Subtitle that complements the main title */
-  font-weight: 300;
-  max-width: 600px; /* Maximum width of the subtitle for better readability */
-  margin: auto;
-}
-
-/* Decorative Elements */
-.decorative-bar {
-  height: 4px;
-  width: 80px;
-  background-color: #ffd700; /* Gold color for an elegant touch */
+  font-size: 2em;
+  color: #ffecb3; /* Light golden tone */
+  max-width: 650px;
   margin: 20px auto;
+  z-index: 2;
 }
 
-/* Example of a Call-to-Action Button */
-.hero-cta {
-  padding: 12px 30px;
-  font-size: 18px;
-  background-color: #ff4500; /* Or any color that fits the site’s theme */
-  color: white;
-  border: none;
-  border-radius: 25px; /* Rounded edges for the CTA button */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease;
-  text-decoration: none; /* Assuming it's a link */
-  display: inline-block; /* To apply padding and margin */
-}
-
-.hero-cta:hover {
-  background-color: #e03e10; /* Slightly darker shade on hover */
-  cursor: pointer;
-}
-
-/* Responsive Design for Hero Section */
-@media (max-width: 768px) {
-  .hero {
-    height: 50vh; /* Adjust height for smaller screens */
-  }
-
-  .hero-title {
-    font-size: 32px; /* Smaller font size for mobile */
-  }
-
-  .hero-subtitle {
-    font-size: 18px;
-  }
-}
-
-/* Sliders Styles */
+/* Sliders and Images */
 .slider-wrapper {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow */
-  border-radius: 10px; /* Rounded corners */
+  background: #f7f2e7;; /* Lighter background for contrast */
+  border: 3px solid #a1887f;
+  box-shadow: 0 6px 15px rgba(161, 136, 127, 0.3);
+  border-radius: 12px;
   overflow: hidden;
-}
-
-.slider-container .slick-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 300px; /* Increased height */
-  text-align: center;
-  background: #fffefe;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 5px; /* Slide rounded corners */
+  padding: 15px;
 }
 
 .slider-container img {
-  max-height: 90%;
-  max-width: 90%;
-  margin: 5%;
-  display: block;
+  max-height: 250px; /* Smaller images for a more balanced look */
+  max-width: 80%; /* Adjust width to prevent oversized images */
+  margin: 10px;
+  border: 3px solid #8d6e63; /* Softer brown border */
+  border-radius: 8px;
 }
 
-.slider-title {
-  font-size: 24px;
-  text-align: center;
-  color: rgb(0, 0, 0);
-  background-color: #b97c19;
-  margin-bottom: 20px;
-  transition: color 0.3s ease;
-}
-
-.slider-title:hover {
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-
-/* Slide Caption Styles */
-.slide-caption {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  padding: 10px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* Individual Slide Title and Description */
-.slide-title,
-.slide-description {
-  margin: 0 auto;
-  display: block;
-}
-
-/* Typography for Welcome Message and Paragraph */
+/* Typography and Text Styles */
 .Welcome {
-  font-size: 32px;
-  color: #ffffff;
+  font-size: 2.8em;
+  color: #5d4037; /* Deep, warm brown */
 }
 
 .Paragraph {
-  font-size: 18px;
-  color: #1d1717;
+  font-size: 1.4em;
+  color: #795548;
+  margin: 15px auto;
+  line-height: 1.6; /* Improved readability */
 }
 
-.slider-title .book-now-link {
-  color: #fff; /* Or any color you prefer */
-  text-decoration: none; /* Removes the underline */
-  transition: color 0.3s ease;
+/* Button Styles */
+.hero-cta {
+  background-color: #ffab91; /* Light coral, evoking a sweet, warm feel */
+  border-radius: 20px;
+  padding: 12px 25px;
+  font-size: 1.5em;
+  transition: background-color 0.4s, transform 0.3s;
 }
 
-.slider-title .book-now-link:hover {
-  color: #ffd700; /* Changes color on hover */
+.hero-cta:hover {
+  background-color: #ff8a65; /* Darker shade for depth on hover */
+  transform: translateY(-5px); /* Slight upward shift */
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-title {
+    font-size: 2.8em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.6em;
+  }
+
+  .slider-container img {
+    max-height: 200px; /* Further reduce image size for mobile */
+  }
+}
+
+/* Animation for Sliders */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slider-container {
+  animation: fadeIn 0.6s ease-out forwards;
 }

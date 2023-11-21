@@ -2,7 +2,7 @@ import React from 'react';
 import BookUsSlider from './Bookus';
 import GallerySlider from './Gallery';
 import './Home.css';
-import heroVideo from '../../images/hero.mp4'; // Ensure this path is correct
+import heroVideo from '../../images/hero.mp4'; 
 
 function Home() {
   return (

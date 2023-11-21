@@ -9,6 +9,25 @@ function BookNow() {
     date: '',
     additionalInfo: ''
   });
+
+  function getCurrentDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month = today.getMonth() + 1; // Months are 0-based, so add 1
+    let day = today.getDate();
+  
+    // Add leading zeros if the month or day is a single digit
+    if (month < 10) {
+      month = `0${month}`;
+    }
+    if (day < 10) {
+      day = `0${day}`;
+    }
+  
+    // Return the date in "YYYY-MM-DD" format
+    return `${year}-${month}-${day}`;
+  }
+  
   const [isSubmitted, setIsSubmitted] = useState(false); // State to track if the form is submitted
 
   const handleInputChange = (e) => {
@@ -93,14 +112,15 @@ function BookNow() {
           </select>
 
           <label htmlFor="date">Date of Event:</label>
-          <input 
-            type="date" 
-            id="date" 
-            name="date" 
-            value={formData.date} 
-            onChange={handleInputChange} 
-            required 
-          />
+            <input 
+              type="date" 
+              id="date" 
+              name="date" 
+              value={formData.date} 
+              onChange={handleInputChange} 
+              required 
+              min={getCurrentDate()} // Set the minimum date to the current date
+            />
 
           <label htmlFor="additionalInfo">Additional Information:</label>
           <textarea 

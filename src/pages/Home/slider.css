@@ -1,79 +1,92 @@
-/* Slider Container */
+/* Overall Slider Container */
 .slider-container {
-    width: 80%;
-    margin: auto;
-    position: relative;
+  width: 95%;
+  height: 400px;
+  margin: 50px auto;
+  background-color: #fff7ec; /* Light creamy background */
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+}
+
+/* Slider Title */
+.slider-title {
+  text-align: center;
+  font-size: 28px;
+  color: #6b3e26; /* Dark brown color */
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Slider Wrapper for Each Slide */
+.slider-wrapper {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Image Styling */
+.slider-wrapper img {
+  width: 200%;
+  height: 750px;
+  border-radius: 8px;
+  border: 3px solid #c69c6d; /* Light brown border */
+}
+
+/* Slide Caption Styling */
+.slide-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  padding: 0px 0px;
+  background-color: rgba(102, 51, 0, 0.7); /* Dark brown overlay */
+  border-radius: 8px;
+  font-family: 'Cinzel', serif;
+}
+
+/* Slide Title */
+.slide-title {
+  font-size: 32px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+/* Slide Description */
+.slide-description {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+/* React Slick Overrides */
+.slick-dots li button:before {
+  color: #c69c6d; /* Light brown dots */
+}
+
+.slick-prev, .slick-next {
+  color: #6b3e26; /* Dark brown arrows */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .slider-container {
+    width: 95%;
   }
-  
-  /* Slider Title */
+
   .slider-title {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 40px;
+    background-color: #fff7ec;
   }
-  
-  /* Slider Wrapper for each slide */
-  .slider-wrapper {
-    position: relative;
-    text-align: center;
-  }
-  
-  /* Image Styling */
-  .slider-wrapper img {
-    width: 140%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  /* Slide Caption Styling */
-  .slide-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
-  }
-  
-  /* Slide Title */
+
   .slide-title {
     font-size: 20px;
-    font-weight: bold;
-    margin: 0;
   }
-  
-  /* Slide Description */
+
   .slide-description {
     font-size: 16px;
-    margin: 10px 0 0;
   }
-  
-  /* React Slick Overrides (Optional) */
-  .slick-dots {
-    bottom: 10px;
-  }
-  
-  .slick-prev, .slick-next {
-    color: #333;
-    z-index: 1;
-  }
-  
-  /* Responsive Styling (Optional) */
-  @media (max-width: 768px) {
-    .slider-title {
-      font-size: 20px;
-    }
-  
-    .slide-title {
-      font-size: 18px;
-    }
-  
-    .slide-description {
-      font-size: 14px;
-    }
-  }
-  
+}

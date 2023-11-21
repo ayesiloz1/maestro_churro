@@ -100,8 +100,8 @@ function Contact() {
           )}
 
           {contactMethod === 'call' && (
-            <div className="call-section">
-              <a href="tel:+1234567890">+1 (234) 567-890</a> {/* Replace with your actual phone number */}
+            <div className="call-section" style={{ marginTop: '20px' }}>
+            <a href="tel:+1234567890" style={{ color: 'white' }}>+1 (234) 567-890</a>
             </div>
           )}
         </>

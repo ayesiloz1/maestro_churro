@@ -51,22 +51,29 @@ export const submitCareer = async (data) => {
     // Handle network or other errors here
   }
 };
-
 export const submitOrder = async (orderData) => {
   try {
-    // Replace with the correct URL for your 'submit-order/' endpoint
     const response = await axios.post('http://127.0.0.1:8000/submit-order/', orderData);
 
-    // Check the response and handle success or errors
-    if (response.status === 200) {
+    if (response.status === 201) { // Assuming 201 for a successful creation as per REST standards.
       console.log('Order submitted successfully.');
-      // Perform additional actions here on success, like showing a confirmation message
+      // Here you can redirect the user or display a success message.
     } else {
-      console.error('Order submission failed with status:', response.status);
-      // Handle errors here, like showing an error message to the user
+      // If the server responded with a status other than 201, it's an unexpected scenario.
+      console.error(`Order submission failed with status: ${response.status} and message: ${response.statusText}`);
     }
   } catch (error) {
-    console.error('An error occurred while submitting the order:', error);
-    // Handle network or other errors here
+    if (error.response) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx
+      console.error(`Server responded with status: ${error.response.status}`);
+      console.error(`Error data: ${error.response.data}`);
+    } else if (error.request) {
+      // The request was made but no response was received
+      console.error('The request was made but no response was received', error.request);
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.error('Error', error.message);
+    }
   }
 };
