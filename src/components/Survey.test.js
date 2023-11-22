@@ -36,13 +36,7 @@ describe('Survey Component', () => {
     // Submit the form
     fireEvent.click(screen.getByRole('button', { name: /Submit/i }));
 
-    // Wait for expected outcome, such as a thank you message or an alert
-    await waitFor(() => {
-      // Adjust the expected outcome based on your implementation
-      // expect(screen.getByText(/Thank you for completing our survey!/i)).toBeInTheDocument();
-      // or
-      // expect(window.alert).toHaveBeenCalledWith('Thank you for completing our survey!');
-    });
+    
   });
 
   // Additional tests can be added here as needed
