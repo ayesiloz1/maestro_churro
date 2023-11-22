@@ -1,7 +1,7 @@
-// api.js
+
 import axios from 'axios';
 
-const API_URL = 'http://127.0.0.1:8000/'; // Replace with your backend's actual URL
+const API_URL = 'http://127.0.0.1:8000/'; 
 
 
 
@@ -16,7 +16,7 @@ export const getChurros = async () => {
 
 export const submitSurvey = async (data) => {
   try {
-    // Correct URL to match Django's 'submit-survey/' endpoint
+   
     const response = await axios.post('http://127.0.0.1:8000/submit-survey/', data);
 
     // Check the response and handle success or errors
@@ -48,16 +48,16 @@ export const submitCareer = async (data) => {
     }
   } catch (error) {
     console.error('An error occurred while submitting the career application:', error);
-    // Handle network or other errors here
+    
   }
 };
 export const submitOrder = async (orderData) => {
   try {
     const response = await axios.post('http://127.0.0.1:8000/submit-order/', orderData);
 
-    if (response.status === 201) { // Assuming 201 for a successful creation as per REST standards.
+    if (response.status === 201) {
       console.log('Order submitted successfully.');
-      // Here you can redirect the user or display a success message.
+     
     } else {
       // If the server responded with a status other than 201, it's an unexpected scenario.
       console.error(`Order submission failed with status: ${response.status} and message: ${response.statusText}`);

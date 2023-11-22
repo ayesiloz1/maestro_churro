@@ -78,10 +78,10 @@
   }
 }
 
-/* Updated Button Spacing */
+
 .contact-methods button {
   padding: 10px 15px;
-  margin: 0 10px; /* Horizontal margin added */
+  margin: 0 10px; 
   font-size: 1em;
   background-color: #36485c;
   color: white;
@@ -111,9 +111,9 @@
   color: #fdfeff;
 }
 
-/* You can remove these rules if they are not being used */
+
 .email-field,
 .message-field,
 .call-field {
-  margin-bottom: 20px; /* Adjust this value as needed */
+  margin-bottom: 20px; 
 }

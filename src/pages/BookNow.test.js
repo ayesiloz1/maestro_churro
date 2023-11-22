@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, fireEvent, waitFor, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import BookNow from './BookUs'; // Adjust the path according to your project structure
+import BookNow from './BookUs'; 
 
 // Mock global fetch for the test
 global.fetch = jest.fn();
@@ -11,6 +11,7 @@ beforeEach(() => {
   fetch.mockClear();
   fetch.mockResolvedValue({ ok: true, json: () => Promise.resolve({}) });
 });
+
 //Verifies that all form inputs and the submit button are rendered correctly.
 describe('BookNow Component', () => {
   it('renders the booking form with all inputs', () => {
@@ -22,6 +23,7 @@ describe('BookNow Component', () => {
     expect(screen.getByLabelText(/Additional Information:/i)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: /Submit Booking/i })).toBeInTheDocument();
   });
+  
 //Checks if the component correctly updates its state when the user types or selects values in the form fields.
   it('allows input for all fields', () => {
     render(<BookNow />);

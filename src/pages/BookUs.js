@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './BookNow.css'; // Ensure the CSS file is correctly linked for styling
+import './BookNow.css'; 
 
 function BookNow() {
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ function BookNow() {
   function getCurrentDate() {
     const today = new Date();
     const year = today.getFullYear();
-    let month = today.getMonth() + 1; // Months are 0-based, so add 1
+    let month = today.getMonth() + 1; 
     let day = today.getDate();
   
     // Add leading zeros if the month or day is a single digit
@@ -27,8 +27,9 @@ function BookNow() {
     // Return the date in "YYYY-MM-DD" format
     return `${year}-${month}-${day}`;
   }
-  
-  const [isSubmitted, setIsSubmitted] = useState(false); // State to track if the form is submitted
+
+  // State to track if the form is submitted
+  const [isSubmitted, setIsSubmitted] = useState(false); 
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,7 +40,7 @@ function BookNow() {
   };
 
   const sendBookingData = (data) => {
-    const endpoint = 'http://localhost:8000/api/submit-booking/'; // Replace with your actual API endpoint
+    const endpoint = 'http://localhost:8000/api/submit-booking/'; 
 
     return fetch(endpoint, {
       method: 'POST',
@@ -56,7 +57,7 @@ function BookNow() {
     sendBookingData(formData)
       .then(response => {
         if (response.ok) {
-          setIsSubmitted(true); // Update state on successful submission
+          setIsSubmitted(true); 
         } else {
           console.error('Server error:', response);
         }
@@ -119,7 +120,7 @@ function BookNow() {
               value={formData.date} 
               onChange={handleInputChange} 
               required 
-              min={getCurrentDate()} // Set the minimum date to the current date
+              min={getCurrentDate()} 
             />
 
           <label htmlFor="additionalInfo">Additional Information:</label>
